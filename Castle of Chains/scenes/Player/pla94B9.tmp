@@ -1,0 +1,120 @@
+[gd_scene load_steps=15 format=3 uid="uid://bp0pxro1k61a2"]
+
+[ext_resource type="Script" path="res://scenes/Player/scripts/player.gd" id="1_gql31"]
+[ext_resource type="Texture2D" uid="uid://chja3rhu1rtfd" path="res://assets/sprites/stand.png" id="2_h6kwl"]
+[ext_resource type="Script" path="res://scripts/FiniteStateMachine.gd" id="2_p3bap"]
+[ext_resource type="Texture2D" uid="uid://dwch3hyxfetu8" path="res://assets/sprites/walk.png" id="3_2myc3"]
+[ext_resource type="Script" path="res://scenes/Player/scripts/states/Walk.gd" id="4_4ekxv"]
+[ext_resource type="Script" path="res://scenes/Player/scripts/states/Idle.gd" id="4_fp6vd"]
+[ext_resource type="Script" path="res://scenes/Player/scripts/states/Jump.gd" id="5_pe66k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohi3w"]
+atlas = ExtResource("2_h6kwl")
+region = Rect2(0, 0, 83, 73)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_403ud"]
+atlas = ExtResource("3_2myc3")
+region = Rect2(0, 0, 83, 73)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lo5uv"]
+atlas = ExtResource("3_2myc3")
+region = Rect2(83, 0, 83, 73)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rg6v"]
+atlas = ExtResource("3_2myc3")
+region = Rect2(0, 73, 83, 73)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbe7s"]
+atlas = ExtResource("3_2myc3")
+region = Rect2(83, 73, 83, 73)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vux51"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohi3w")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_403ud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lo5uv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rg6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbe7s")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 9.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hynvq"]
+radius = 8.0
+height = 34.0
+
+[node name="player" type="CharacterBody2D"]
+floor_snap_length = 4.0
+script = ExtResource("1_gql31")
+
+[node name="FSM" type="Node" parent="."]
+script = ExtResource("2_p3bap")
+
+[node name="Idle" type="Node" parent="FSM"]
+script = ExtResource("4_fp6vd")
+
+[node name="Walk" type="Node" parent="FSM"]
+script = ExtResource("4_4ekxv")
+speed = null
+acceleration = null
+deceleration = null
+
+[node name="Jump" type="Node" parent="FSM"]
+script = ExtResource("5_pe66k")
+
+[node name="Floored" type="Node" parent="FSM"]
+
+[node name="Standup" type="Node" parent="FSM"]
+
+[node name="Pull_Back" type="Node" parent="FSM"]
+
+[node name="Pickup" type="Node" parent="FSM"]
+
+[node name="Idle_Ball" type="Node" parent="FSM"]
+
+[node name="Walk_Ball" type="Node" parent="FSM"]
+
+[node name="Jump_Ball" type="Node" parent="FSM"]
+
+[node name="Ball_Spin" type="Node" parent="FSM"]
+
+[node name="Ball_Throw" type="Node" parent="FSM"]
+
+[node name="Tumble" type="Node" parent="FSM"]
+
+[node name="Hanging" type="Node" parent="FSM"]
+
+[node name="Chain_Climb" type="Node" parent="FSM"]
+
+[node name="Death" type="Node" parent="FSM"]
+
+[node name="Respawn" type="Node" parent="FSM"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2.38419e-07, -22)
+scale = Vector2(0.678082, 0.678082)
+sprite_frames = SubResource("SpriteFrames_vux51")
+animation = &"walk"
+frame = 1
+frame_progress = 0.839536
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -17)
+shape = SubResource("CapsuleShape2D_hynvq")

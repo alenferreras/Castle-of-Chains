@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://bt1385xd512da"]
+
+[ext_resource type="Texture2D" uid="uid://dl1nce8nior4e" path="res://assets/sprites/player/Ball and Chain.png" id="1_r8dln"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_efyy8"]
+friction = 0.5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_apyri"]
+radius = 6.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_peimb"]
+radius = 44.0114
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uhgno"]
+radius = 4.0
+
+[node name="ball" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 2
+mass = 20.0
+physics_material_override = SubResource("PhysicsMaterial_efyy8")
+lock_rotation = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -1)
+scale = Vector2(0.239833, 0.239833)
+texture = ExtResource("1_r8dln")
+region_enabled = true
+region_rect = Rect2(88.8031, 15.0659, 55.301, 67.9873)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_apyri")
+
+[node name="Area_big" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_big"]
+shape = SubResource("CircleShape2D_peimb")
+
+[node name="Area_small" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_small"]
+shape = SubResource("CircleShape2D_uhgno")

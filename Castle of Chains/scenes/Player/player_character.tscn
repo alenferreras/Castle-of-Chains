@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwlqv0ku8rjog"]
+
+[ext_resource type="Script" path="res://scripts/player/player_character.gd" id="1_xdp0c"]
+[ext_resource type="PackedScene" uid="uid://bc6segsijahrf" path="res://scenes/Player/ball_and_chain_player.tscn" id="2_6pudi"]
+[ext_resource type="PackedScene" uid="uid://bp0pxro1k61a2" path="res://scenes/Player/player.tscn" id="3_6rew5"]
+
+[node name="playerCharacter" type="Node2D"]
+script = ExtResource("1_xdp0c")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+node_a = NodePath("../ball_and_chain_player")
+node_b = NodePath("../player")
+
+[node name="ball_and_chain_player" parent="." instance=ExtResource("2_6pudi")]
+visible = false
+rotation = -3.14139
+
+[node name="player" parent="." instance=ExtResource("3_6rew5")]
+position = Vector2(1, -6)
+
+[node name="Line2D" type="Line2D" parent="."]
+visible = false
+position = Vector2(1, 2)
+
+[node name="Line2D2" type="Line2D" parent="."]
+visible = false
+position = Vector2(1, 2)
+default_color = Color(0.00784314, 0, 0.67451, 1)
+
+[connection signal="ball_carry" from="player" to="ball_and_chain_player" method="_on_player_ball_carry"]
+[connection signal="ball_drop" from="player" to="ball_and_chain_player" method="_on_player_ball_drop"]
+[connection signal="ball_throw" from="player" to="ball_and_chain_player" method="_on_player_ball_throw"]

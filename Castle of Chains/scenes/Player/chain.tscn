@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://1k8myx5c2j7x"]
+
+[ext_resource type="Texture2D" uid="uid://dl1nce8nior4e" path="res://assets/sprites/player/Ball and Chain.png" id="1_f0qil"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vye6i"]
+radius = 2.0
+height = 8.0
+
+[node name="chain" type="RigidBody2D"]
+collision_layer = 0
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1.13687e-13, 9.53674e-07)
+scale = Vector2(0.377633, 0.374925)
+texture = ExtResource("1_f0qil")
+region_enabled = true
+region_rect = Rect2(53.0258, 19.3511, 13.7833, 23.1073)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_vye6i")

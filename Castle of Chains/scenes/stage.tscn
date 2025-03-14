@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://wxtlqu5d3iq"]
+
+[ext_resource type="Texture2D" uid="uid://dhv50fsadfd4o" path="res://assets/sprites/world/stage.png" id="1_trpk4"]
+
+[node name="stage" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1, -6)
+texture = ExtResource("1_trpk4")
+region_enabled = true
+region_rect = Rect2(10.2606, 114.432, 177.273, 76.7617)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-2, 1)
+polygon = PackedVector2Array(63, 18, -61, 19, -87, -23, -73, -27, 79, -27, 89, -25)

@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwlqv0ku8rjog"]
+
+[ext_resource type="Script" path="res://scripts/player/player_character.gd" id="1_xdp0c"]
+[ext_resource type="PackedScene" uid="uid://bc6segsijahrf" path="res://scenes/Player/ball_and_chain_player.tscn" id="3_0lmol"]
+[ext_resource type="PackedScene" uid="uid://cov0428wv7pa2" path="res://scenes/Player/character.tscn" id="3_em5ks"]
+
+[node name="playerCharacter" type="Node2D"]
+script = ExtResource("1_xdp0c")
+
+[node name="Character" parent="." instance=ExtResource("3_em5ks")]
+position = Vector2(1, -7)
+collision_layer = 268435456
+collision_mask = 0
+
+[node name="ball_and_chain_player" parent="." instance=ExtResource("3_0lmol")]
+rotation = 3.14068
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+node_a = NodePath("../ball_and_chain_player")
+node_b = NodePath("../Character")
+
+[node name="Line2D" type="Line2D" parent="."]
+visible = false
+position = Vector2(1, 2)
+
+[node name="Line2D2" type="Line2D" parent="."]
+visible = false
+position = Vector2(1, 2)
+default_color = Color(0.00784314, 0, 0.67451, 1)
