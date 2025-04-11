@@ -2,7 +2,7 @@ extends PlayerState
 
 func enter(previous_state_path: String, data := {}) -> void:
 	player.visible = true
-	if previous_state_path == "BallThrow":
+	if data.get("facing") == 1:
 		play_animation = "standup2"
 	else: 
 		play_animation = "standup"

@@ -9,10 +9,11 @@ class_name Player
 
 #Misc Variables
 @onready var animated_sprite = $AnimatedSprite2D
-@export var in_area_small = false
-@export var in_area_big = false
-@export var mouse_enter = false
+var in_area_small = false
+var in_area_big = false
+var mouse_enter = false
 @onready var ray_cast_2d = $Area2D/RayCast2D
+var turnable = true
 
 #Camera Variables
 @onready var room_change = false
@@ -52,6 +53,7 @@ func _physics_process(delta):
 	#default_movement(delta)
 	advanced_movement()
 	
+	#print(velocity)
 	#print(velocity.x)
 	#print("area small = " + str(in_area_small))
 	#print("area big = " + str(in_area_big))
@@ -145,14 +147,14 @@ func advanced_movement():
 		deceleration = 0.1
 		jump_force = -270.0
 	
-	
 	#Flip the Sprite
-	if direction > 0:
-		animated_sprite.flip_h = false
-		ray_cast_2d.target_position = Vector2(40, 0)
-	elif direction < 0:
-		animated_sprite.flip_h = true
-		ray_cast_2d.target_position = -Vector2(40, 0)
+	if turnable:
+		if direction > 0:
+			animated_sprite.flip_h = false
+			ray_cast_2d.target_position = Vector2(40, 0)
+		elif direction < 0:
+			animated_sprite.flip_h = true
+			ray_cast_2d.target_position = -Vector2(40, 0)
 		
 	if room_change:
 		state_machine.pause_movement()

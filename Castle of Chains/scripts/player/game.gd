@@ -1,5 +1,4 @@
 extends Node2D
-@onready var player_character = $playerCharacter
 
 @onready var label = $Debug/Label
 @onready var label2 = $Debug/Label2

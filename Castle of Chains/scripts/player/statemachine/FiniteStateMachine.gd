@@ -39,7 +39,7 @@ func _transition_to_next_state(target_state_path: String, data: Dictionary = {})
 	state.exit()
 	state = get_node(target_state_path)
 	state.enter(previous_state_path, data)
-	print(str(state))
+	#print(str(state))
 	animated_sprite_2d.play(state.play_animation)
 
 func pause_movement():

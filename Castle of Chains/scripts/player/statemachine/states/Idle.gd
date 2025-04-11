@@ -1,6 +1,7 @@
 extends PlayerState
 
 func enter(previous_state_path: String, data := {}) -> void:
+	player.turnable = true
 	if player.is_carrying:
 		play_animation = "idle_ball"
 	else:
