@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://1nwrgela7sd0"]
 
-[ext_resource type="Script" path="res://scripts/player/Ball and Chain/ball_and_chain.gd" id="1_c5lxs"]
+[ext_resource type="Script" uid="uid://cpsbsxcw6wyr8" path="res://scripts/player/Ball and Chain/ball_and_chain.gd" id="1_c5lxs"]
 [ext_resource type="Texture2D" uid="uid://bejyygjwkxrbj" path="res://assets/sprites/player/circle.png" id="2_78aqj"]
-[ext_resource type="Script" path="res://scripts/player/point.gd" id="3_gisqi"]
+[ext_resource type="Script" uid="uid://dgqc3e8chnj68" path="res://scripts/player/point.gd" id="3_gisqi"]
 [ext_resource type="Texture2D" uid="uid://dl1nce8nior4e" path="res://assets/sprites/player/Ball and Chain.png" id="4_5stx7"]
-[ext_resource type="Script" path="res://scripts/player/Ball and Chain/ball.gd" id="5_dqa83"]
+[ext_resource type="Script" uid="uid://d2ur0r31yd0cm" path="res://scripts/player/Ball and Chain/ball.gd" id="5_dqa83"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l2xof"]
 radius = 4.0
@@ -22,7 +22,6 @@ radius = 13.3333
 
 [node name="ball and chain" type="Node2D"]
 z_index = 1
-scale = Vector2(0.75, 0.75)
 script = ExtResource("1_c5lxs")
 
 [node name="point_area" type="StaticBody2D" parent="."]

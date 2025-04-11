@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cwlqv0ku8rjog"]
 
-[ext_resource type="Script" path="res://scripts/player/player_character.gd" id="1_xdp0c"]
+[ext_resource type="Script" uid="uid://sv0144balgck" path="res://scripts/player/player_character.gd" id="1_xdp0c"]
 [ext_resource type="PackedScene" uid="uid://bc6segsijahrf" path="res://scenes/Player/ball_and_chain_player.tscn" id="2_6pudi"]
 [ext_resource type="PackedScene" uid="uid://bp0pxro1k61a2" path="res://scenes/Player/player.tscn" id="3_6rew5"]
 

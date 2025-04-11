@@ -1,6 +1,6 @@
-[gd_scene load_steps=126 format=3 uid="uid://bp0pxro1k61a2"]
+[gd_scene load_steps=134 format=3 uid="uid://bp0pxro1k61a2"]
 
-[ext_resource type="Script" path="res://scripts/player/player.gd" id="1_gql31"]
+[ext_resource type="Script" uid="uid://dl5chhs0ublrt" path="res://scripts/player/player.gd" id="1_gql31"]
 [ext_resource type="Texture2D" uid="uid://chbib5scwv1ai" path="res://assets/sprites/player/Falling.png" id="2_fllwq"]
 [ext_resource type="Texture2D" uid="uid://chja3rhu1rtfd" path="res://assets/sprites/player/stand.png" id="2_h6kwl"]
 [ext_resource type="Texture2D" uid="uid://c7xwm1xapi1qp" path="res://assets/sprites/player/idle.png" id="2_ufs3b"]
@@ -14,20 +14,20 @@
 [ext_resource type="PackedScene" uid="uid://1nwrgela7sd0" path="res://scenes/Player/ball_and_chain.tscn" id="7_1trr4"]
 [ext_resource type="Texture2D" uid="uid://dnupd0melxhke" path="res://assets/sprites/player/Laying.png" id="7_dakgu"]
 [ext_resource type="Texture2D" uid="uid://xuyyyl6scwj5" path="res://assets/sprites/player/PullBack.png" id="7_lj8a4"]
-[ext_resource type="Script" path="res://scripts/player/statemachine/FiniteStateMachine.gd" id="8_l50bw"]
-[ext_resource type="Script" path="res://scripts/player/statemachine/states/Idle.gd" id="9_ct5ec"]
-[ext_resource type="Script" path="res://scripts/player/statemachine/states/Walk.gd" id="10_huft0"]
+[ext_resource type="Script" uid="uid://bqaolbafa3545" path="res://scripts/player/statemachine/FiniteStateMachine.gd" id="8_l50bw"]
+[ext_resource type="Script" uid="uid://c4qtarfs7himi" path="res://scripts/player/statemachine/states/Idle.gd" id="9_ct5ec"]
+[ext_resource type="Script" uid="uid://bjmiegw2q81xs" path="res://scripts/player/statemachine/states/Walk.gd" id="10_huft0"]
 [ext_resource type="Texture2D" uid="uid://cn2b3rwrwe1i1" path="res://assets/sprites/player/Standup.png" id="10_o28wk"]
-[ext_resource type="Script" path="res://scripts/player/statemachine/states/Jump.gd" id="11_xcvxq"]
+[ext_resource type="Script" uid="uid://hsmcpg7lhm5e" path="res://scripts/player/statemachine/states/Jump.gd" id="11_xcvxq"]
 [ext_resource type="Texture2D" uid="uid://c372lmkpa0c4v" path="res://assets/sprites/player/Standup2.png" id="12_f5s6r"]
-[ext_resource type="Script" path="res://scripts/player/statemachine/states/Fall.gd" id="12_lww7o"]
-[ext_resource type="Script" path="res://scripts/player/statemachine/states/PickUp.gd" id="14_5xxbq"]
-[ext_resource type="Script" path="res://scripts/player/statemachine/states/PullBack.gd" id="15_l3u33"]
+[ext_resource type="Script" uid="uid://dkk0wvjq0eueh" path="res://scripts/player/statemachine/states/Fall.gd" id="12_lww7o"]
+[ext_resource type="Script" uid="uid://ir36nwb0ovy0" path="res://scripts/player/statemachine/states/PickUp.gd" id="14_5xxbq"]
+[ext_resource type="Script" uid="uid://dtdeotvbignvv" path="res://scripts/player/statemachine/states/PullBack.gd" id="15_l3u33"]
 [ext_resource type="Texture2D" uid="uid://drle2001hxjvm" path="res://assets/sprites/player/Laying2.png" id="16_xug2w"]
-[ext_resource type="Script" path="res://scripts/player/statemachine/states/Laying.gd" id="19_n5w2q"]
-[ext_resource type="Script" path="res://scripts/player/statemachine/states/Standup.gd" id="20_pmlvo"]
-[ext_resource type="Script" path="res://scripts/player/statemachine/states/BallSpin.gd" id="23_myfcl"]
-[ext_resource type="Script" path="res://scripts/player/statemachine/states/BallThrow.gd" id="24_24pdq"]
+[ext_resource type="Script" uid="uid://ck4lunvasaaqp" path="res://scripts/player/statemachine/states/Laying.gd" id="19_n5w2q"]
+[ext_resource type="Script" uid="uid://6b52rartx34g" path="res://scripts/player/statemachine/states/Standup.gd" id="20_pmlvo"]
+[ext_resource type="Script" uid="uid://hjbw8kx8fhha" path="res://scripts/player/statemachine/states/BallSpin.gd" id="23_myfcl"]
+[ext_resource type="Script" uid="uid://x757dchveiw" path="res://scripts/player/statemachine/states/BallThrow.gd" id="24_24pdq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nuhes"]
 
@@ -82,6 +82,10 @@ region = Rect2(0, 73, 83, 73)
 [sub_resource type="AtlasTexture" id="AtlasTexture_swx1x"]
 atlas = ExtResource("4_dt03y")
 region = Rect2(83, 73, 83, 73)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tcnx"]
+atlas = ExtResource("5_hg6ug")
+region = Rect2(0, 0, 83, 73)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_35p4p"]
 atlas = ExtResource("2_fllwq")
@@ -170,6 +174,34 @@ region = Rect2(0, 146, 83, 73)
 [sub_resource type="AtlasTexture" id="AtlasTexture_thxgh"]
 atlas = ExtResource("7_dakgu")
 region = Rect2(83, 146, 83, 73)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8ane"]
+atlas = ExtResource("16_xug2w")
+region = Rect2(0, 0, 83, 73)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5v2nk"]
+atlas = ExtResource("16_xug2w")
+region = Rect2(83, 0, 83, 73)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3kps"]
+atlas = ExtResource("16_xug2w")
+region = Rect2(166, 0, 83, 73)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y0jbo"]
+atlas = ExtResource("16_xug2w")
+region = Rect2(0, 73, 83, 73)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2223k"]
+atlas = ExtResource("16_xug2w")
+region = Rect2(83, 73, 83, 73)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_itgy2"]
+atlas = ExtResource("16_xug2w")
+region = Rect2(166, 73, 83, 73)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mr3n8"]
+atlas = ExtResource("16_xug2w")
+region = Rect2(0, 146, 83, 73)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nsnyn"]
 atlas = ExtResource("6_tid8t")
@@ -369,6 +401,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_4tcnx")
+}],
+"loop": true,
+"name": &"ball_throw",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_35p4p")
 }, {
 "duration": 1.0,
@@ -462,6 +502,32 @@ animations = [{
 "loop": false,
 "name": &"laying",
 "speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8ane")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5v2nk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3kps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y0jbo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2223k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_itgy2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mr3n8")
+}],
+"loop": false,
+"name": &"laying_front",
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -775,8 +841,8 @@ height = 34.0
 size = Vector2(0, 0)
 
 [node name="player" type="CharacterBody2D"]
-position = Vector2(1, -22)
 input_pickable = true
+floor_stop_on_slope = false
 script = ExtResource("1_gql31")
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -803,10 +869,9 @@ scale = Vector2(0.678, 0.678)
 texture = ExtResource("5_hg6ug")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, -2)
 scale = Vector2(0.678082, 0.678082)
 sprite_frames = SubResource("SpriteFrames_vux51")
-animation = &"idle"
+animation = &"pull_back"
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -849,7 +914,6 @@ shape = SubResource("RectangleShape2D_raamm")
 [node name="ball and chain" parent="." instance=ExtResource("7_1trr4")]
 visible = false
 position = Vector2(-1, 6)
-scale = Vector2(1, 1)
 
 [node name="StateMachine" type="Node" parent="."]
 script = ExtResource("8_l50bw")

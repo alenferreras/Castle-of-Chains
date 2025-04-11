@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bc6segsijahrf"]
 
 [ext_resource type="Texture2D" uid="uid://dl1nce8nior4e" path="res://assets/sprites/player/Ball and Chain.png" id="1_7citn"]
-[ext_resource type="Script" path="res://scripts/player/Ball and Chain/ball_and_chain_player.gd" id="1_h72r4"]
+[ext_resource type="Script" uid="uid://de3e8b122a4jc" path="res://scripts/player/Ball and Chain/ball_and_chain_player.gd" id="1_h72r4"]
 [ext_resource type="PackedScene" uid="uid://bt1385xd512da" path="res://scenes/Player/ball.tscn" id="3_jxog7"]
 [ext_resource type="PackedScene" uid="uid://1k8myx5c2j7x" path="res://scenes/Player/chain.tscn" id="3_u08ju"]
 

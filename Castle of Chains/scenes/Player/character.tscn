@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://cov0428wv7pa2"]
 
-[ext_resource type="Script" path="res://scripts/player/character.gd" id="1_b3lxx"]
+[ext_resource type="Script" uid="uid://b31kho1idr3wr" path="res://scripts/player/character.gd" id="1_b3lxx"]
 [ext_resource type="Texture2D" uid="uid://o37c0or0jnjg" path="res://assets/sprites/player/Ball_Throw.png" id="2_oa2qy"]
 [ext_resource type="Texture2D" uid="uid://chbib5scwv1ai" path="res://assets/sprites/player/Falling.png" id="3_dsfu2"]
 [ext_resource type="Texture2D" uid="uid://dnupd0melxhke" path="res://assets/sprites/player/Laying.png" id="4_sxjdh"]
